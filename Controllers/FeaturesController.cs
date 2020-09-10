@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using vega.Controllers.Resources;
 using vega.Models;
 using vega.Persistence;
 
@@ -20,9 +21,11 @@ namespace vega.Controllers
         }
 
         [HttpGet("/api/features")]
-        public async Task<IEnumerable<Feature>> GetFeatures()
+        public async Task<IEnumerable<FeatureResource>> GetFeatures()
         {
-           return await _context.Features.ToListAsync();
+           var features = await _context.Features.ToListAsync();
+        
+            return _mapper.Map<List<Feature>, List<FeatureResource>>(features);
         }
     }
 }
