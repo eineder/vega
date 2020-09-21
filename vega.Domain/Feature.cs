@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace vega.Models
+namespace vega.Domain
 {
     public class Feature
     {

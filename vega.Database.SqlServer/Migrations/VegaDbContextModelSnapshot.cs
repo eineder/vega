@@ -2,17 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using vega.Persistence;
+using vega.Database;
 
-namespace vega.Migrations
+namespace vega.Database.SqlServer.Migrations
 {
     [DbContext(typeof(VegaDbContext))]
-    [Migration("20200910121932_SeedFeature")]
-    partial class SeedFeature
+    partial class VegaDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

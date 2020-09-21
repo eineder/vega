@@ -1,6 +1,6 @@
 using AutoMapper;
 using vega.Controllers.Resources;
-using vega.Models;
+using vega.Domain;
 
 namespace vega.Mapping
 {

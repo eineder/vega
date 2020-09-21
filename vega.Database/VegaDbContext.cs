@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using vega.Models;
+using vega.Domain;
 
-namespace vega.Persistence
+namespace vega.Database
 {
     public class VegaDbContext: DbContext
     {

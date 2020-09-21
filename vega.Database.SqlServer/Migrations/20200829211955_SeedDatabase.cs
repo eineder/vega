@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace vega.Migrations
+namespace vega.Database.SqlServer.Migrations
 {
     public partial class SeedDatabase : Migration
     {
