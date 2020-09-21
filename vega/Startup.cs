@@ -25,7 +25,11 @@ namespace vega
         {
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddDbContext<VegaDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:Default"]));
+            services.AddDbContext<VegaDbContext>(options => 
+                {
+                    // options.UseSqlServer(Configuration["ConnectionStrings:Default"]);
+                    options.UseSqlite(@"Data Source=..\vega.Database.Sqlite\vega.db", b => b.MigrationsAssembly("vega.Database.Sqlite"));
+                });
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
