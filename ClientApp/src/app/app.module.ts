@@ -1,8 +1,7 @@
-import { FeatureService } from './services/feature.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { MakeService } from './services/make.service';
+import { VehicleService } from './services/vehicle.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -33,8 +32,7 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
     ])
   ],
   providers: [
-    FeatureService,
-    MakeService
+    VehicleService
   ],
   bootstrap: [AppComponent]
 })
