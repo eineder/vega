@@ -1,3 +1,4 @@
+import { FeatureService } from './services/feature.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -32,6 +33,7 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
     ])
   ],
   providers: [
+    FeatureService,
     MakeService
   ],
   bootstrap: [AppComponent]
