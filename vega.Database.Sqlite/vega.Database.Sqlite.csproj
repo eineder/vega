@@ -12,4 +12,10 @@
     <ProjectReference Include="..\vega.Database\vega.Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+      <Content Include="vega.db">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>  
+  </ItemGroup>
+
 </Project>
