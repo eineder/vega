@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/vega.csproj",
+                "${workspaceFolder}/vega/vega.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/vega.csproj",
+                "${workspaceFolder}/vega/vega.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/vega.csproj",
+                "${workspaceFolder}/vega/vega.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -52,7 +52,7 @@
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/vega.csproj"
+                "appProject": "${workspaceFolder}/vega/vega.csproj"
             }
         },
         {
@@ -68,7 +68,7 @@
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/vega.csproj"
+                "appProject": "${workspaceFolder}/vega/vega.csproj"
             }
         },
         {
@@ -79,7 +79,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/vega.csproj",
+                "appProject": "${workspaceFolder}/vega/vega.csproj",
                 "enableDebugging": true
             }
         },
@@ -91,7 +91,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/vega.csproj"
+                "appProject": "${workspaceFolder}/vega/vega.csproj"
             }
         }
     ]
