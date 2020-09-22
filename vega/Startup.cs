@@ -1,8 +1,11 @@
+using System.IO;
+using System.Reflection;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,7 +31,11 @@ namespace vega
             services.AddDbContext<VegaDbContext>(options => 
                 {
                     // options.UseSqlServer(Configuration["ConnectionStrings:Default"]);
-                    options.UseSqlite(@"Data Source=..\vega.Database.Sqlite\vega.db", b => b.MigrationsAssembly("vega.Database.Sqlite"));
+
+                    var startupDir = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                    var filename = Path.Combine(startupDir, "vega.db");
+                    var connstring = (new SqliteConnectionStringBuilder {DataSource = filename}).ToString();
+                    options.UseSqlite(connstring, b => b.MigrationsAssembly("vega.Database.Sqlite"));
                 });
 
             services.AddControllersWithViews();
